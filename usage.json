@@ -1,0 +1,12 @@
+{
+  "builders": [{
+      "type": "docker",
+      "pull": true,
+      "image": "egghead/ubuntu-ansible-1.4",
+      "export_path": "ansible-provisioned.tar"
+  }],
+  "provisioners": [{
+      "type": "ansible-local",
+      "playbook_file": "provision.yaml"
+  }]
+}

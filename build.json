@@ -2,7 +2,7 @@
   "builders": [{
       "type": "docker",
       "image": "ubuntu",
-      "export_path": "ansible-image.tar"
+      "export_path": "ubuntu-ansible-1.4.tar"
   }],
   "provisioners": [{
       "type": "shell",
@@ -14,8 +14,5 @@
           "apt-get install -y python-dev python-apt python-keyczar python-pycurl python-pip python-virtualenv",
 	  "pip install -U ansible==1.4"
       ]
-  }, {
-      "type": "ansible-local",
-      "playbook_file": "provision.yaml"
   }]
 }
