@@ -1,6 +1,7 @@
 {
   "builders": [{
       "type": "docker",
+      "pull", true,
       "image": "ubuntu",
       "export_path": "ubuntu-ansible-1.4.tar"
   }],
