@@ -1,7 +1,6 @@
 {
   "builders": [{
       "type": "docker",
-      "pull", true,
       "image": "ubuntu",
       "export_path": "ubuntu-ansible-1.4.tar"
   }],
@@ -12,7 +11,7 @@
 	  "echo deb http://us.archive.ubuntu.com/ubuntu/ precise-security main restricted universe multiverse >> /etc/apt/sources.list",
 	  "echo deb http://us.archive.ubuntu.com/ubuntu/ precise-updates main restricted universe multiverse >> /etc/apt/sources.list",
           "apt-get update",
-          "apt-get install -y python-dev python-apt python-keyczar python-pycurl python-pip python-virtualenv",
+          "apt-get install -y python-dev python-apt python-pycurl python-pip python-virtualenv",
 	  "pip install -U ansible==1.4"
       ]
   }]
