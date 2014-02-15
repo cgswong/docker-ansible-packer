@@ -1,25 +1,18 @@
 docker-ansible-packer
 =====================
 
-packer setup for creating docker images using ansible
+[packer](http://packer.io) setup for creating ubuntu based [docker](http://docker.io) using [ansible](http://ansible.com)
 
-This project is used to build the image provided at: https://index.docker.io/u/egghead/ubuntu-ansible-1.4/
+The provided base image `egghead/ubuntu-ansible-1.4` comes with ansible 1.4.5 pre-installed.
 
-If you have `packer` & `docker` installed, you can use this project to [build](https://github.com/eggsby/docker-ansible-packer/blob/master/build.json) a base image to automate creation of docker images using ansible.
+If you have `packer` & `docker` installed you can use this project to automate creation of new docker images using ansible.
 
-    packer build build.json
-    # builds ubuntu-ansible-1.4 base image
+Note: *you don't need ansible locally, since that all lives in the container*
 
-To use the new base image check out the [usage.json](https://github.com/eggsby/docker-ansible-packer/blob/master/usage.json) file
+Check out the [usage.json](https://github.com/eggsby/docker-ansible-packer/blob/master/usage.json) file to get started on your own packer images.
 
     packer build usage.json
-    ==> docker: Creating a temporary directory for sharing data...
-    ==> docker: Pulling Docker image: egghead/ubuntu-ansible-1.4
-        docker: Pulling repository egghead/ubuntu-ansible-1.4
-        docker: c4b6ccea1241: Download complete
-        docker: c4b6ccea1241: Download complete
-    ==> docker: Starting docker container with /bin/bash
-        docker: Container ID: aa2db1214e4134ef556aa5b795542aec74cd1cf6e759a45bc6b063aac9307501[0m
+    ...
     ==> docker: Provisioning with Ansible...
         docker: Creating Ansible staging directory...
         docker: Creating directory: /tmp/packer-provisioner-ansible-local
@@ -45,6 +38,3 @@ To use the new base image check out the [usage.json](https://github.com/eggsby/d
     ==> docker: Exporting the container
     ==> docker: Killing the container: aa2db1214e4134ef556aa5b795542aec74cd1cf6e759a45bc6b063aac9307501
     Build 'docker' finished.
-
-    ==> Builds finished. The artifacts of successful builds are:
-    --> docker: Exported Docker file: ansible-provisioned.tar
