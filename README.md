@@ -3,7 +3,7 @@ docker-ansible-packer
 
 [packer](http://packer.io) setup for creating ubuntu based [docker](http://docker.io) using [ansible](http://ansible.com)
 
-The provided base image `egghead/ubuntu-ansible-1.4` comes with ansible 1.4.5 pre-installed.
+The provided base image `egghead/ubuntu-ansible-1.6` comes with ansible 1.6.1 pre-installed.
 
 If you have `packer` & `docker` installed you can use this project to automate creation of new docker images using ansible.
 

@@ -2,17 +2,14 @@
   "builders": [{
       "type": "docker",
       "image": "ubuntu",
-      "export_path": "ubuntu-ansible-1.4.tar"
+      "export_path": "ubuntu-ansible-1.6.tar"
   }],
   "provisioners": [{
       "type": "shell",
       "inline": [
-	  "echo deb http://us.archive.ubuntu.com/ubuntu/ precise main restricted universe multiverse > /etc/apt/sources.list",
-	  "echo deb http://us.archive.ubuntu.com/ubuntu/ precise-security main restricted universe multiverse >> /etc/apt/sources.list",
-	  "echo deb http://us.archive.ubuntu.com/ubuntu/ precise-updates main restricted universe multiverse >> /etc/apt/sources.list",
+          "sudo add-apt-repository ppa:rquillo/ansible -y",
           "apt-get update",
-          "apt-get install -y sudo python-dev python-apt python-pycurl python-pip python-virtualenv",
-	  "pip install -U ansible==1.4.5"
+          "apt-get install -y sudo ansible python-apt python-pycurl python-pip python-virtualenv"
       ]
   }]
 }

@@ -1,7 +1,7 @@
 {
   "builders": [{
       "type": "docker",
-      "image": "egghead/ubuntu-ansible-1.4",
+      "image": "egghead/ubuntu-ansible-1.6",
       "export_path": "ansible-provisioned.tar"
   }],
   "provisioners": [{
