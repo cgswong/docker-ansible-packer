@@ -1,0 +1,11 @@
+{
+  "builders": [{
+      "type": "docker",
+      "image": "dudadornelles/centos-ansible",
+      "export_path": "centos-provisioned.tar"
+  }],
+  "provisioners": [{
+      "type": "ansible-local",
+      "playbook_file": "provision.yaml"
+  }]
+}
