@@ -9,7 +9,7 @@ If you have `packer` & `docker` installed you can use this project to automate c
 
 Note: *you don't need ansible locally, since that all lives in the container*
 
-Check out the [usage.json](https://github.com/eggsby/docker-ansible-packer/blob/master/usage.json) file to get started on your own packer images.
+Check out the [usage_centos.json](https://github.com/eggsby/docker-ansible-packer/blob/master/usage_centos.json) or [usage_ubuntu.json](https://github.com/eggsby/docker-ansible-packer/blob/master/usage_ubuntu.json) file to get started on your own packer images.
 
     packer build usage.json
     ...
